@@ -1,0 +1,89 @@
+$TTL 86400
+aco-connexion.org.         IN      SOA     aco-connexion.org. ns1.aco-connexion.org. (
+                                20231108      ; Serial
+                                3600    ; Refresh
+                                900     ; Retry
+                                3600000 ; Expire
+                                3600 )  ; Minimum
+
+;Name Servers
+                                IN      NS      ns1.aco-connexion.org.
+                                IN      NS      ns2.aco-connexion.org.
+
+;Enderecos Locais
+ns1.aco-connexion.org.             IN      A       104.248.253.98
+ns2.aco-connexion.org.             IN      A       159.223.164.27
+@                                  IN      A       104.248.253.98
+*                                  IN      A       104.248.253.98
+;localhost.aco-connexion.org.      IN      A       127.0.0.1
+mail.aco-connexion.org.            IN      A       104.248.253.98
+imap.aco-connexion.org.            IN      A       104.248.253.98
+smtp.aco-connexion.org.            IN      A       104.248.253.98
+www.aco-connexion.org.             IN      A       104.248.253.98
+webmail.aco-connexion.org.         IN      A       104.248.253.98
+seguro.aco-connexion.org.	   IN	   A	   104.248.253.98
+radio.aco-connexion.org.           IN      A       104.248.253.98
+
+
+; Dominios virtuais das comunidades
+bakouma.aco-connexion.org.       IN      A       104.248.253.98
+bangassouhub.aco-connexion.org.  IN      A       104.248.253.98
+banguihub.aco-connexion.org.     IN      A       104.248.253.98
+briahub.aco-connexion.org.       IN      A       104.248.253.98
+goboudou.aco-connexion.org.      IN      A       104.248.253.98
+irabanda.aco-connexion.org.      IN      A       104.248.253.98
+kitessa.aco-connexion.org.       IN      A       104.248.253.98
+selim.aco-connexion.org.         IN      A       104.248.253.98
+mouka.aco-connexion.org.         IN      A       104.248.253.98
+ouaddamaikaga.aco-connexion.org. IN      A       104.248.253.98
+yangoudrondja.aco-connexion.org. IN      A       104.248.253.98
+aigbando.aco-connexion.org.      IN      A       104.248.253.98
+amdafock.aco-connexion.org.      IN      A       104.248.253.98
+yalinga.aco-connexion.org.       IN      A       104.248.253.98
+samouandja.aco-connexion.org.    IN      A       104.248.253.98
+obo.aco-connexion.org.           IN      A       104.248.253.98
+birao.aco-connexion.org.         IN      A       104.248.253.98
+ouandja.aco-connexion.org.       IN      A       104.248.253.98
+delembe.aco-connexion.org.       IN      A       104.248.253.98
+boura.aco-connexion.org.         IN      A       104.248.253.98
+zemio.aco-connexion.org          IN      A       104.248.253.98
+;Servidores de Email -----------------------------------------------
+@                               MX      5       aco-connexion.org.
+mail                            MX      20      aco-connexion.org.
+
+; email SPF
+@               TXT  "v=spf1 ip4:104.248.253.98 -all"
+mail            TXT  "v=spf1 ip4:104.248.253.98 -all"
+bakouma         TXT  "v=spf1 ip4:104.248.253.98 -all"
+bangassouhub    TXT  "v=spf1 ip4:104.248.253.98 -all"
+banguihub       TXT  "v=spf1 ip4:104.248.253.98 -all"
+briahub         TXT  "v=spf1 ip4:104.248.253.98 -all"
+goboudou        TXT  "v=spf1 ip4:104.248.253.98 -all"
+irabanda        TXT  "v=spf1 ip4:104.248.253.98 -all"
+irabanda        TXT  "v=spf1 ip4:104.248.253.98 -all"
+kitessa         TXT  "v=spf1 ip4:104.248.253.98 -all"
+selim           TXT  "v=spf1 ip4:104.248.253.98 -all" 
+mouka           TXT  "v=spf1 ip4:104.248.253.98 -all"
+ouaddamaikaga   TXT  "v=spf1 ip4:104.248.253.98 -all"
+yangoudrondja   TXT  "v=spf1 ip4:104.248.253.98 -all"
+aigbando        TXT  "v=spf1 ip4:104.248.253.98 -all"
+amdafock        TXT  "v=spf1 ip4:104.248.253.98 -all"
+yalinga         TXT  "v=spf1 ip4:104.248.253.98 -all"
+samouandja      TXT  "v=spf1 ip4:104.248.253.98 -all"
+obo             TXT  "v=spf1 ip4:104.248.253.98 -all"
+birao           TXT  "v=spf1 ip4:104.248.253.98 -all"
+ouandja         TXT  "v=spf1 ip4:104.248.253.98 -all"
+delembe         TXT  "v=spf1 ip4:104.248.253.98 -all"
+boura           TXT  "v=spf1 ip4:104.248.253.98 -all"
+zemio           TXT  "v=spf1 ip4:104.248.253.98 -all"
+
+
+
+
+; DMARC entry
+_dmarc      TXT  "v=DMARC1; p=reject; pct=100; rua=mailto:root@aco-connexion.org; ruf=mailto:root@aco-connexion.org;"
+
+; DKIM key
+2023._domainkey	IN	TXT	( "v=DKIM1; h=sha256; k=rsa; "
+	  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqJXq2+Z9/PawW80xfcX/5P0XFxpp7XGBoLhwjqexhvJi/4YzuUnQ4Acs1ca4oelpfIIE/ZFMXLfGfxeXi2mmBtWco73A73MknsCJXUUmhzHCk8FkZUGeoXUzdRn080J3PiBuqgnUehB7IqG1xTJo9mYV85i7K5lWWfC8CbakHnSHsxetUSA0qyoggr1lLB3bNkQqf7jLkGfhYM"
+	  "xRGA90WfkRf58w51fL+HY5h4rNK7i/Vlf+hRWhf9N3c3T1Nt+9x+K4mhlicgDCBasNMPVFLxJ/WeT80rIAdlyfrZAi6GWfAhw9/vO/27S74FfDcoQP/MxG31WqQvMnnCsKCyWlvQIDAQAB" )  ; ----- DKIM key 2023 for aco-connexion.org

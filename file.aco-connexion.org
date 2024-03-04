@@ -1,0 +1,53 @@
+## This is the HERMES language definition... options are: en, pt and es...
+HERMES_LANGUAGE="fr"
+
+# hardware type (ubitx, sbitx)
+HARDWARE=${HARDWARE:="sbitx"}
+
+## set timezone
+TIMEZONE="Africa/Bangui"
+
+## This is the HERMES station type. Options are "remote" or "gateway".
+HERMES_ROLE="remote"
+
+## This is the HERMES station rule to select between environments (PRODUCTION/DEVELOPMENT)
+HERMES_PRODUCTION="false"
+
+## GUI LOGIN BEHAVIOUR
+REQUIRE_LOGIN="true"
+
+##GUI EMERGENCY EMAIL FOR CONTACT
+EMERGENCY_EMAIL="support@aco-connexion.org"
+
+## Forward email
+HERMES_FWD_EMAIL="tous@file.aco-connexion.org"
+
+## UUCP NETWORK
+UUCP_NET="BRA31LA"
+
+## Callsign
+CALLSIGN="B0DE-5"
+UUCP_ALIAS="file"
+
+HERMES_HOSTNAME="file.aco-connexion.org"
+
+SSL_DOMAIN="aco-connexion.org"
+
+# set true for first installation
+FIRST_INSTALL="true"
+
+### VARA key
+## PU2UIT:
+# f93t1sepkbtt2gfh
+## PU4GNU:
+# 3qo81w47ktqze0ld
+## The Registration Code for AE4ML:
+# 6iebasl6qr1lqqyp
+## B0DE:
+# uk7l89d8jntr85wq
+## B0DK:
+# 2nblhy89ocfnszzc
+## BRA31LA
+# mtcl6eknbl7anik1
+
+VARA_KEY="uk7l89d8jntr85wq"
