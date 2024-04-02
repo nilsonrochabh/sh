@@ -1,0 +1,124 @@
+#
+
+#
+# First some defaults. These are for all other entries (unless overridden).
+#
+call-login user
+call-password pass
+time any
+
+forward ANY
+chat-timeout 100
+
+protocol iygvG
+
+protocol-parameter G packet-size 1024
+protocol-parameter G window 7
+
+protocol-parameter y packet-size 512
+protocol-parameter y timeout 1800
+
+protocol-parameter i timeout 10
+protocol-parameter i retries 3
+
+commands rmail rnews crmail uuadmin uuadm
+
+local-send /var/spool/uucppublic
+local-receive /var/spool/uucppublic
+#remote-send /
+#remote-receive /
+
+port TCP
+
+system BRA31LA
+alias bangassouhub
+address 10.207.0.2
+
+system BRA31LA-1
+alias briahub
+address 10.207.0.4
+
+system BRA31LA-2
+alias irabanda
+address 10.207.0.12
+
+system BRA31LA-3
+alias goboudou
+address 10.207.0.7
+
+system BRA31LA-4
+alias bakouma
+address 10.207.0.9
+
+system BRA31LA-5
+alias banguihub
+address 10.207.0.5
+
+system BRA31LA-6
+alias kitessa
+address 10.207.0.16
+
+system BRA31LA-7
+alias selim
+address 10.207.0.17
+
+system BRA31LA-8
+alias mouka
+address 10.207.0.18
+
+system BRA31LA-9
+alias ouaddamaikaga
+address 10.207.0.19
+
+system BRA31LA-10
+alias yangoudrondja
+address 10.207.0.20
+
+system BRA31LA-11
+alias aigbando
+address 10.207.0.21
+
+system BRA31LA-12
+alias amdafock
+address 10.207.0.22
+
+system BRA31LA-13
+alias yalinga
+address 10.207.0.23
+
+system BRA31LA-14
+alias samouandja
+address 10.207.0.24
+
+system BRA31LA-15
+alias obo
+address 10.207.0.25
+
+system B0DE-1
+alias birao
+address 10.207.0.26
+
+system B0DE-2
+alias ouandja
+address 10.207.0.27
+
+system B0DE-3
+alias delembe
+address 10.207.0.28
+
+system B0DE-4
+alias boura
+address 10.207.0.29
+
+system B0DE-5
+alias zemio
+address 10.207.0.30
+
+system juba
+address 10.207.0.6
+
+system nilson
+address 10.207.0.3
+ 
+ 
+ 

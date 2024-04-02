@@ -47,7 +47,6 @@ ouandja.aco-connexion.org.       IN      A       104.248.253.98
 delembe.aco-connexion.org.       IN      A       104.248.253.98
 boura.aco-connexion.org.         IN      A       104.248.253.98
 zemio.aco-connexion.org          IN      A       104.248.253.98
-
 ;Servidores de Email -----------------------------------------------
 @                               MX      5       aco-connexion.org.
 mail                            MX      20      aco-connexion.org.
@@ -77,7 +76,6 @@ ouandja         TXT  "v=spf1 ip4:104.248.253.98 -all"
 delembe         TXT  "v=spf1 ip4:104.248.253.98 -all"
 boura           TXT  "v=spf1 ip4:104.248.253.98 -all"
 zemio           TXT  "v=spf1 ip4:104.248.253.98 -all"
-
 
 
 

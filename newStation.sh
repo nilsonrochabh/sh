@@ -23,5 +23,10 @@ sed -i -e '80i\' -e ''$station'         TXT  "v=spf1 ip4:104.248.253.98 -all"' z
 pivpn -a -d 3650 nopass -n $station.aco.connexion.org
 
 ##Pegando o ip da vpn
-cat /etc/openvpn/ccd/$station.aco.connexion.org | awk '{print $2}'
+cat /etc/openvpn/ccd/$station.aco.connexion.org | awk '{print $2}' > ip
+
+##Editando o aquivo uucp
+sed -i -e '$a''system B0DE-x' uucp/sys.hermes
+sed -i -e '$a''alias '$station'' uucp/sys.hermes
+sed -i -e '$a''address '$ip'' uucp/sys.hermes
 
