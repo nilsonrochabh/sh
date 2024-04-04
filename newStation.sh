@@ -15,10 +15,6 @@ sed -i 's/file/'$station'/g' $station.aco-connexion.org
 #conf/transport.BRA31LA
 sed -i -e '$a'$station'.aco-connexion.org uucp:'$station'' transport.BRA31LA
 
-#editando o /etc/bind/zones/aco-connexion.org
-sed -i -e '50i\' -e ''$station'.aco-connexion.org        IN      A       104.248.253.98' zones/aco-connexion.org
-sed -i -e '80i\' -e ''$station'         TXT  "v=spf1 ip4:104.248.253.98 -all"' zones/aco-connexion.org 
-
 ##Criando a estação VPN
 pivpn -a -d 3650 nopass -n $station.aco.connexion.org
 
@@ -30,3 +26,9 @@ sed -i -e '$a''system B0DE-x' uucp/sys.hermes
 sed -i -e '$a''alias '$station'' uucp/sys.hermes
 sed -i -e '$a''address '$ip'' uucp/sys.hermes
 
+#editando o /etc/bind/zones/aco-connexion.org
+sed -i -e '50i\' -e ''$station'.aco-connexion.org        IN      A       104.248.253.98' zones/aco-connexion.org
+sed -i -e '80i\' -e ''$station'         TXT  "v=spf1 ip4:104.248.253.98 -all"' zones/aco-connexion.org 
+#cp /etc/bind/zones/aco-connexion.org /etc/bind/zones/aco-connexion.org.old
+#cp zones/aco-connexion.org /etc/bind/zones/
+#service named restart
